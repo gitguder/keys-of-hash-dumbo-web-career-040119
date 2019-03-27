@@ -1,5 +1,5 @@
 class Hash
   def keys_of(*arguments)
-    collect { |key, value}
+    collect { |key, value| arguments.include?(value) ? key : nil}
   end
 end
